@@ -45,10 +45,12 @@ class NameserverCreate extends DataConversion
 
         $newDataObject = $p->convertDataObject($dataObject, $newStructure);
 
-        $newDataObject->attributes->add_to_all_registry = explode(
-            ',',
-            $newDataObject->attributes->add_to_all_registry
+        if(isset($newDataObject->attributes->add_to_all_registry)){
+            $newDataObject->attributes->add_to_all_registry = explode(
+                ',',
+                $newDataObject->attributes->add_to_all_registry
             );
+        }
 
         return $newDataObject;
     }
