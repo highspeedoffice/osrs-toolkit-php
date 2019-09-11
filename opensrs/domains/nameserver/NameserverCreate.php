@@ -19,7 +19,6 @@ class NameserverCreate extends Base
     public $requiredFields = array(
         'attributes' => array(
             'name',
-            'ipaddress',
             ),
         );
 
