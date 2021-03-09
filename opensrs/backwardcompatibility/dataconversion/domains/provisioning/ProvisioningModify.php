@@ -71,6 +71,7 @@ class ProvisioningModify extends DataConversion
             'reg_type' => 'data->reg_type',
             'uk_affect_domains' => 'data->uk_affect_domains',
             'report_email' => 'data->report_email',
+            'dnssec' => 'data->dnssec'
             ),
         );
 
