@@ -297,6 +297,9 @@ class Ops
      */
     public function _quoteXMLChars($string)
     {
+        if ($string === '<dt_array/>') {
+            return $string;
+        }
         $search = array('&', '<', '>', "'", '"');
         $replace = array('&amp;', '&lt;', '&gt;', '&apos;', '&quot;');
         $string = str_replace($search, $replace, $string);
